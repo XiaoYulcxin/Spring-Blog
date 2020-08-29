@@ -1,0 +1,116 @@
+@charset "utf-8";
+body{
+    background: url('../images/email-pattern.png') repeat fixed;
+    /*cursor: url('../images/mouse.png'), auto !important;*/
+    cursor: url("../images/mouse.png"), auto;
+}
+footer{
+    z-index: -1;
+}
+.m-medium-image{
+    width: 100px !important;
+}
+.m-padded-tb-tiny{
+    padding-top: 0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+.m-padded-tb-small{
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+.m-padded-tb{
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+.m-padded-tb-large{
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+.m-padded-tb-big{
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+.m-padded-tb-huge{
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
+.m-padded-tb-massive{
+    padding-top: 5em !important;
+    padding-bottom: 5em !important;
+}
+.m-padd-center-massive{
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+.m-inline-block{
+    display: inline-block;
+}
+.m-container{
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+}
+.m-margin-tb-tiny{
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+.m-top-right{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+.m-header-item{
+    padding-left: 0.4em !important;
+    padding-right: 0.4em !important;
+}
+.m-header-small{
+    padding-left: 0.5em !important;
+    padding-right: 0.5em !important;
+}
+.m-pc-hide{
+    display: none !important;
+}
+.m-container-small{
+    max-width: 60em !important;
+    margin: auto !important;
+}
+.m-container-mini{
+    max-width: 30em !important;
+    margin: auto !important;
+}
+.m-text-lr{
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+}
+.m-text-insrit{
+    color: rgb(116, 116, 116);
+    line-height: 2em !important;
+}
+/* 屏幕小于768px隐藏导航栏 */
+@media screen and (max-width: 768px) {
+    .m-moblie-hide{
+        display: none !important;
+    }
+    .m-pc-hide{
+        display: block !important;
+    }
+    .m-text-lr{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .m-middle-wide{
+        width: 100% !important;
+    }
+}
+.m-fixxed{
+    z-index: 99 !important;
+    position: fixed !important;
+    right: 40px !important;
+    bottom: 20px !important;
+}
+.m-header-position{
+    position: relative !important;
+    top: 25% !important;
+}
+.m-teal{
+    color: #00B5AD !important;
+}

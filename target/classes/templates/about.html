@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+    <head th:replace="_fragments :: head(~{::title})">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>关于我</title>
+        <link rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" href="../static/css/index.css">
+        <link rel="stylesheet"
+              href="http://www.lcxinblog.cn/html/animate/Animate.css_files/animate.min.css">
+        <link rel="stylesheet"
+              href="http://www.lcxinblog.cn/html/animate/Animate.css_files/animate.css">
+    </head>
+
+    <body>
+        <!-- 导航栏 -->
+        <nav th:replace="_fragments :: menu(5)" class="ui inverted attached stackable menu">
+            <div class="ui container">
+                <div class="ui inverted secondary stackable menu container
+                    m-padded-tb-tiny" id="app">
+                    <h2 class="ui header blue item m-header-item">青青子衿</h2>
+                    <a href="index.html" class="item m-item m-moblie-hide"><i
+                            class="home icon"></i>首页</a>
+                    <a href="types.html" class="item m-item m-moblie-hide"><i
+                            class="idea icon"></i>分类</a>
+                    <a href="tags.html" class="item m-item m-moblie-hide"><i
+                            class="tags icon"></i>标签</a>
+                    <a href="archives.html" class="item m-item m-moblie-hide"><i
+                            class="clone icon"></i>归档</a>
+                    <a href="about.html" class="item m-item
+                        m-moblie-hide"><i class="paper
+                            plane outline icon"></i>关于我</a>
+                    <div class="right item m-item m-moblie-hide">
+                        <div class="ui icon inverted transparent input">
+                            <input type="text" placeholder="请搜索内容">
+                            <i class="search link icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="ui icon menu toggle black button m-top-right
+                m-pc-hide">
+                <i class="sidebar icon"></i>
+            </a>
+        </nav>
+        <!-- 中间部分 -->
+        <div class="m-container-small m-padded-tb-big">
+            <div class="ui container">
+                <div class="ui stackable grid">
+                    <div class="eleven wide column">
+                        <div class="ui segment">
+                            <img src="../static/images/aboutImage.jpg"
+                                 th:src="@{/images/aboutImage.jpg}"
+                                alt=""
+                                class="ui rounded image">
+                        </div>
+                    </div>
+                    <div class="five wide column">
+                        <div class="ui top attached segment">
+                            <div class="ui header">关于我</div>
+                        </div>
+                        <div class="ui attached segment">
+                            <p class="m-text-insrit">
+                                <strong>李灿欣</strong>,一名正在捣腾Java的社会新生
+                                <br>
+                                <strong>团队配合能力：</strong>善于沟通，有一定团队协作经验，具备一定的活动策划和组织协调能力。
+                                <br>
+                                <strong>工作态度评价：</strong>良好的心态和责任感，吃苦耐劳，擅于管理时间，勇于面对变化和挑战。
+                                <br>
+                                <strong>自主学习能力：</strong>习惯制定切实可行的学习计划，上岗后能积极主动学习岗位所需知识技能。
+                            </p>
+                        </div>
+                        <!-- 个人标签 -->
+                        <div class="ui attached segment">
+                            <div class="ui orange basic label left pointing">编程</div>
+                            <div class="ui orange basic label left pointing">吉他</div>
+                            <div class="ui orange basic label left pointing">后期</div>
+                        </div>
+                        <!-- 技术标签 -->
+                        <div class="ui attached segment">
+                            <div class="ui blue basic label left pointing
+                                m-margin-tb-tiny">Java</div>
+                            <div class="ui blue basic label left pointing
+                                m-margin-tb-tiny">MySQL</div>
+                            <div class="ui blue basic label left pointing
+                                m-margin-tb-tiny">Spring</div>
+                            <div class="ui blue basic label left pointing
+                                m-margin-tb-tiny">Pr</div>
+                            <div class="ui blue basic label left pointing
+                                m-margin-tb-tiny">AE</div>
+                            <div class="ui blue basic label left pointing
+                                m-margin-tb-tiny">...</div>
+                        </div>
+                        <div class="ui bottom attached segment">
+                            <a class="ui button circular icon"><i
+                                    class="github icon"></i></a>
+                            <a class="ui button circular icon" id="wechat"
+                                data-position="bottom center"><i class="wechat
+                                    icon"></i></a>
+                            <a href="" class="ui button circular icon"
+                                data-content="1538947053" id="qq"
+                                data-position="bottom center"><i class="qq
+                                    icon"></i></a>
+                            <a href="" class="ui button circular icon"><i
+                                    class="weibo icon"></i></a>
+                        </div>
+                        <!-- wechat二维码 -->
+                        <div class="ui wechatQR flowing popup hidden transiton">
+                            <div class="ui basic label">
+                                <div class="ui small images" style="font-size:
+                                    inherit !important;">
+                                    <img th:src="@{/images/wechat.jpg}" alt=""
+                                         class="ui rounded image">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- qq -->
+                        <div class="ui qqR flowing popup hidden transiton">
+                            <div class="ui basic label">
+                                <div class="ui small images" style="font-size:
+                                    inherit !important;">
+                                    <img th:src="@{/images/QQ.jpg}" alt=""
+                                         class="ui rounded image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部 -->
+        <footer th:replace="_fragments :: footer" class="ui inverted segment vertical m-padded-tb-massive">
+            <div class="ui container center aligned">
+                <!-- grid：分成16份 -->
+                <div class="ui inverted stackable grid divided">
+                    <div class="three wide column">
+                        <div class="ui list inverted link">
+                            <div class="item">
+                                <img th:src="@{/images/wechat.jpg}" alt=""
+                                     class="ui medium rounded image
+                                    m-medium-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <h4 class="ui inverted header">最新博客</h4>
+                        <div class="ui list inverted link">
+                            <a href="#" class="item">CSS的历史进程</a>
+                            <a href="#" class="item">深造Java</a>
+                            <a href="#" class="item">CSS的历史进程</a>
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <h4 class="ui inverted header">联系我</h4>
+                        <div class="ui list inverted link">
+                            <a class="item">Email:1538947053@qq.com</a>
+                            <a class="item">Tel:15089601241</a>
+                            <a class="item">QQ:1538947053(微信同号)</a>
+                        </div>
+                    </div>
+                    <div class="five wide column">
+                        <h4 class="ui inverted header">Lcxin</h4>
+                        <p>
+                            这是我的个人博客，日常划水，日常在编程界做咸鱼，欢迎各位大佬指点~
+                        </p>
+                    </div>
+                </div>
+                <div class="ui inverted section divider"></div>
+                <p>Copyright &copy;
+                    2019-2020&nbsp;&nbsp;李灿欣&nbsp;&nbsp;Designed&nbsp;&nbsp;by&nbsp;&nbsp;Lcxin</p>
+            </div>
+        </footer>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+        <script></script>
+        <!--/*/</th:block>/*/-->
+        <script>
+            $('.menu.toggle').click(function(){
+                $('.m-item').toggleClass('m-moblie-hide');
+            });
+            $('#qq').popup({
+                popup:$('.qqR.popup'),
+                on:'hover',
+                position:'bottom center'
+            });
+            $('#wechat').popup({
+                popup:$('.wechatQR.popup'),
+                on:'hover',
+                position:'bottom center'
+            });
+        </script>
+    </body>
+
+</html>

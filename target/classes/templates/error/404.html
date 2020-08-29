@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!--        使用thymeleaf引用css样式-->
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="http://www.lcxinblog.cn/html/animate/Animate.css_files/animate.min.css">
+    <link rel="stylesheet" href="http://www.lcxinblog.cn/html/animate/Animate.css_files/animate.css">
+</head>
+<body>
+<nav th:replace="_fragments :: menu(1)" class="ui inverted attached stackable menu" >
+    <div class="ui container">
+        <div class="ui inverted secondary stackable menu container m-padded-tb-tiny animated slideInDown" id="app">
+            <h2 class="ui header blue item m-header-item">青青子衿</h2>
+            <a href="index.html" class="item m-item m-moblie-hide animated slideInDown"><i class="home icon"></i>首页</a>
+            <a href="types.html" class="item m-item m-moblie-hide animated slideInDown"><i class="idea icon"></i>分类</a>
+            <a href="tags.html" class="item m-item m-moblie-hide animated slideInDown"><i class="tags icon"></i>标签</a>
+            <a href="" class="item m-item m-moblie-hide animated slideInDown"><i class="clone icon"></i>归档</a>
+            <a href="" class="item m-item m-moblie-hide animated slideInDown"><i class="paper plane outline icon"></i>关于我</a>
+            <div class="right item m-item m-moblie-hide animated slideInDown">
+                <div class="ui icon inverted transparent input">
+                    <input type="text" placeholder="请搜索内容">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="ui icon menu toggle black button m-top-right m-pc-hide">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+<div class="ui container m-padded-tb-big">
+    <div class="ui error message">
+        <h4 class="ui header"><i class="pushed icon"></i>抱歉，该页面不存在~</h4>
+    </div>
+</div>
+</body>
+</html>

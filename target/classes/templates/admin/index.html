@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+    <head th:replace="admin/_fragments :: head(~{::title})">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>子衿-博客管理</title>
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <link rel="stylesheet" href="../../static/css/index.css">
+        <link rel="stylesheet"
+            href="http://www.lcxinblog.cn/html/animate/Animate.css_files/animate.min.css">
+        <link rel="stylesheet"
+            href="http://www.lcxinblog.cn/html/animate/Animate.css_files/animate.css">
+    </head>
+
+    <body>
+        <!-- 导航栏 -->
+        <nav th:replace="admin/_fragments :: header(0)" class="ui inverted attached stackable menu">
+            <div class="ui container">
+                <div class="ui inverted secondary stackable menu container
+                    m-padded-tb-tiny animated slideInDown" id="app">
+                    <h2 class="ui header blue item m-header-item">子衿-博客后台管理</h2>
+                    <a href="" class="item m-item m-moblie-hide animated
+                        slideInDown"><i class="home icon"></i>博客</a>
+                    <a href="" class="item m-item m-moblie-hide animated
+                        slideInDown"><i class="idea icon"></i>分类</a>
+                    <a href="" class="item m-item m-moblie-hide animated
+                        slideInDown"><i class="tags icon"></i>标签</a>
+                    <div class="right menu m-item m-moblie-hide">
+                        <div class="ui dropdown item">
+                            <div class="text">
+                                <img class="ui avatar image"
+                                    src="https://picsum.photos/id/1032/100/100">
+                                lcxin
+                            </div>
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a href="#" class="button item"> 注销当前用户 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="ui icon menu toggle black button m-top-right
+                m-pc-hide">
+                <i class="sidebar icon"></i>
+            </a>
+        </nav>
+
+        <!-- 中间部分 -->
+        <div class="m-padded-tb-large animated fadeInLeft">
+            <div class="ui container">
+                <div class="ui message large success">
+                    <h2>Hi,</h2>
+                    <p><span th:text="${session.user.username}"></span>,欢迎登录</p>
+                </div>
+                <img src="https://picsum.photos/id/1000/1000/400" alt="" class="ui image rounded bordered fluid">
+            </div>
+        </div>
+
+        <!-- 底部 -->
+        <footer th:replace="admin/_fragments :: footer" class="ui inverted segment vertical
+            m-padded-tb-massive">
+            <div class="ui container center aligned">
+                <!-- grid：分成16份 -->
+                <div class="ui inverted stackable grid divided">
+                    <div class="three wide column">
+                        <div class="ui list inverted link">
+                            <div class="item">
+                                <img src="../../static/images/wechat.jpg"
+                                    alt=""
+                                    class="ui medium rounded image
+                                    m-medium-image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <h4 class="ui inverted header">最新博客</h4>
+                        <div class="ui list inverted link">
+                            <a href="#" class="item">CSS的历史进程</a>
+                            <a href="#" class="item">深造Java</a>
+                            <a href="#" class="item">CSS的历史进程</a>
+                        </div>
+                    </div>
+                    <div class="four wide column">
+                        <h4 class="ui inverted header">联系我</h4>
+                        <div class="ui list inverted link">
+                            <a class="item">Email:1538947053@qq.com</a>
+                            <a class="item">Tel:15089601241</a>
+                            <a class="item">QQ:1538947053(微信同号)</a>
+                        </div>
+                    </div>
+                    <div class="five wide column">
+                        <h4 class="ui inverted header">Lcxin</h4>
+                        <p>
+                            这是我的个人博客，日常划水，日常在编程界做咸鱼，欢迎各位大佬指点~
+                        </p>
+                    </div>
+                </div>
+                <div class="ui inverted section divider"></div>
+                <p>Copyright &copy;
+                    2019-2020&nbsp;&nbsp;李灿欣&nbsp;&nbsp;Designed&nbsp;&nbsp;by&nbsp;&nbsp;Lcxin</p>
+            </div>
+        </footer>
+        <script
+            src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <!--/*/<th:block th:replace="_fragments :: script">/*/-->
+        <script></script>
+        <!--/*/</th:block>/*/-->
+        <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-moblie-hide');
+        });
+        $('.ui.dropdown')
+            .dropdown();
+    </script>
+    </body>
+
+</html>

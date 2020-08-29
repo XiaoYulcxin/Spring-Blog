@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head th:replace="admin/_fragments :: head(~{::title})">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>子衿-后台管理登录</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="../../static/css/index.css">
+    <link rel="stylesheet"
+          href="http://www.lcxinblog.cn/html/animate/Animate.css_files/animate.css">
+</head>
+
+<body>
+<!-- 导航栏 -->
+<div class="m-container-mini m-header-position">
+    <div class="ui middle aligned center aligned grid">
+        <div class="column">
+            <h2 class="ui blue header image" style="font-family: 'Comic Sans MS','微软雅黑',serif">
+                <img th:src="@{/images/Admin-LOGO.png}" alt="" class="ui image rounded small" src="../../static/images/Admin-LOGO.png">
+                <div class="content">
+                    LcxinCDN-登录
+                </div>
+            </h2>
+            <form action="" class="ui large form" method="post" th:action="@{/admin/login}">
+                <div class="ui stacked segment">
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="username" placeholder="请输入用户名/邮箱">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui left icon input">
+                            <i class="lock icon"></i>
+                            <input type="password" name="password" placeholder="请输入密码">
+                        </div>
+                    </div>
+                    <button class="ui fluid large blue submit button" id="submitButton">登录</button>
+                    <a href="" th:href="@{/}" class="ui blue center aligned" style="line-height: 30px"> <i class="ui angle left icon"></i>返回主页 </a>
+                </div>
+                <div class="ui error mini message"></div>
+                <div class="ui message mini negative" th:unless = "${#strings.isEmpty(message)}" th:text="${message}">用户名和密码错误</div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script
+        src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<script>
+    $(function () {
+        $(".ui.form").form({
+            fields:{
+                username:{
+                    identifier: 'username',
+                    rules: [{
+                        type: 'empty',
+                        prompt: '请输入用户名'
+                    }]
+                },
+                password:{
+                    identifier: 'password',
+                    rules: [{
+                        type: 'empty',
+                        prompt: '请输入密码'
+                    }]
+                }
+            }
+        })
+    })
+</script>
+</body>
+
+</html>
